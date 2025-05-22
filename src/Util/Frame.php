@@ -9,7 +9,7 @@ namespace League\BooBoo\Util;
 use InvalidArgumentException;
 use Serializable;
 
-class Frame implements Serializable
+class Frame //implements Serializable
 {
     /**
      * @var array
