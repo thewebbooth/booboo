@@ -10,8 +10,8 @@ use ArrayAccess;
 use ArrayIterator;
 use Countable;
 use IteratorAggregate;
-use Serializable;
-use UnexpectedValueException;
+//use Serializable;
+//use UnexpectedValueException;
 
 /**
  * Exposes a fluent interface for dealing with an ordered list
@@ -52,6 +52,7 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Countable
      * @see IteratorAggregate::getIterator
      * @return ArrayIterator
      */
+    #[\ReturnTypeWillChange]
     public function getIterator()
     {
         return new ArrayIterator($this->frames);
@@ -61,6 +62,7 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Countable
      * @see ArrayAccess::offsetExists
      * @param int $offset
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->frames[$offset]);
@@ -70,6 +72,7 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Countable
      * @see ArrayAccess::offsetGet
      * @param int $offset
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->frames[$offset];
@@ -79,6 +82,7 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Countable
      * @see ArrayAccess::offsetSet
      * @param int $offset
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         throw new \Exception(__CLASS__ . ' is read only');
@@ -88,6 +92,7 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Countable
      * @see ArrayAccess::offsetUnset
      * @param int $offset
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         throw new \Exception(__CLASS__ . ' is read only');
@@ -97,6 +102,7 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Countable
      * @see Countable::count
      * @return int
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count($this->frames);
