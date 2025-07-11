@@ -35,7 +35,6 @@ class AbstractFormatterTest extends \PHPUnit\Framework\TestCase {
         $this->assertEquals('Warning', $formatter->getSeverity(E_COMPILE_WARNING));
         $this->assertEquals('Notice', $formatter->getSeverity(E_NOTICE));
         $this->assertEquals('Notice', $formatter->getSeverity(E_USER_NOTICE));
-        $this->assertEquals('Strict Standards', $formatter->getSeverity(E_STRICT));
         $this->assertEquals('Catchable Error', $formatter->getSeverity(E_RECOVERABLE_ERROR));
         $this->assertEquals('Deprecated', $formatter->getSeverity(E_DEPRECATED));
         $this->assertEquals('Deprecated', $formatter->getSeverity(E_USER_DEPRECATED));

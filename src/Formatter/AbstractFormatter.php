@@ -32,10 +32,6 @@ abstract class AbstractFormatter implements FormatterInterface
                 $severity = 'Notice';
                 break;
 
-            case E_STRICT:
-                $severity = 'Strict Standards';
-                break;
-
             case E_RECOVERABLE_ERROR:
                 $severity = 'Catchable Error';
                 break;

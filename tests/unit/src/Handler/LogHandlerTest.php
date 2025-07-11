@@ -56,7 +56,6 @@ class LogHandlerTest extends TestCase {
         $exception = new \ErrorException($message);
         $this->handler->handle(new \ErrorException($message, 0, E_NOTICE));
         $this->handler->handle(new \ErrorException($message, 0, E_USER_NOTICE));
-        $this->handler->handle(new \ErrorException($message, 0, E_STRICT));
         $this->handler->handle(new \ErrorException($message, 0, E_DEPRECATED));
         $this->handler->handle(new \ErrorException($message, 0, E_USER_DEPRECATED));
 

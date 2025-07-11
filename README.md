@@ -59,7 +59,7 @@ Because we don't throw an exception by default, we don't generate a stack trace 
 
 This solution is designed with logging in mind, so that you can plug and play a [PSR-3][] compliant logging solution in and
 go. BooBoo is sensitive enough to log errors, warnings and notices as such; exceptions are logged as critical, and
-`E_STRICT`/`E_DEPRECATED` warnings are logged as info. Handlers run even if formatting is disabled, so your logging will
+`E_DEPRECATED` warnings are logged as info. Handlers run even if formatting is disabled, so your logging will
 always be on, even in production.
 
 [PSR-3]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
